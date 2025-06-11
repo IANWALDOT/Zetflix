@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+
+  <title>Mi Zetflix</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <header class="navbar">
+    <nav>
+      <ul class="nav-list">
+        <li id="para">Para Waldo</li>
+        <li id="imgtransmitir"><img src="transmitir.png" alt="Transmitir"></li>
+        <li id="imgbuscar"><img src="imgbuscar.png" alt="Buscar"></li>
+        <li id="imgdescargar"><img src="imgdescargar.png" alt="Descargar"></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+<div class="portada-container">
+  <img id="portada" src="" alt="Portada principal" />
+</div>
+</main>
+
+
+  <script src="app.js"></script>
+
+
+
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log('Service Worker registrado'))
+      .catch(err => console.error('Fallo el registro del Service Worker', err));
+  }
+</script>
+</body>
+
+</html>
